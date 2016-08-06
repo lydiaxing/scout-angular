@@ -1,0 +1,37 @@
+<!--<p ng-repeat="competition in $ctrl.competitions">{{competition.name}}</p>-->
+<div class="container">
+
+  <form class="form-signin">
+    <h2 class="form-signin-heading">Select a competition</h2>
+    <!-- TODO add all the competitions from team tb -->
+
+    &nbsp;
+    <div class="radio" ng-repeat="competition in $ctrl.teamCompetitions">
+      <label><input type="radio" ng-model="$ctrl.selectedCompetiton" name="optradio">{{competition.name}}</input></label>
+    </div>
+
+    &nbsp;
+
+    <button class="btn btn-lg btn-primary btn-block" ng-click="$ctrl.select(competition)" type="submit">Select competition</button>
+
+    &nbsp;
+
+    </p>Or</p>
+
+    &nbsp;
+
+    <select>
+      <option>Select a competition</option>
+      <option ng-repeat="competition in $ctrl.competitions" ng-model="$ctrl.selectedAddCompetition">{{competition.name}}</option>
+      <option>CAT EASTER EGG #11 ~(=^‥^) (congrats!!)</option>
+    </select>
+
+    &nbsp;
+
+    <button class="btn btn-lg btn-primary btn-block" ng-click="$ctrl.addCompetition()" type="submit">Add Competition</button>
+
+    &nbsp;
+
+  </form>
+
+</div>

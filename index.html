@@ -1,0 +1,65 @@
+<html ng-app='app'>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>ScoutMeowster5001 (=^･ｪ･^=)</title>
+
+    <script src="lib/angular/angular.min.js"></script>
+    <script src="lib/angular/angular-route.min.js"></script>
+
+    <script src="modules/create-account/create-account.module.js"></script>
+    <script src="modules/create-account/create-account.component.js"></script>
+    <script src="modules/competitions/competitions.module.js"></script>
+    <script src="modules/competitions/competitions.component.js"></script>
+    <script src="modules/login/login.module.js"></script>
+    <script src="modules/login/login.component.js"></script>
+    <script src="modules/match-schedule/match-schedule.module.js"></script>
+    <script src="modules/match-schedule/match-schedule.component.js"></script>
+
+    <script src="js/app.js"></script>
+    <script src="js/navController.js"></script>
+    <script src="js/app.config.js"></script>
+    <script src="lib/bootstrap/ui-bootstrap-tpls-2.0.0.min.js"></script>
+
+  </head>
+
+  <body>
+    <nav class="navbar navbar-default" role="navigation">
+          <div class="navbar-header">
+
+            <button type="button" class="navbar-toggle" ng-init="navCollapsed = true" ng-click="navCollapsed = !navCollapsed">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">ScoutMeowster5001 (=^･ｪ･^=)</a>
+
+          </div>
+
+          <div class="collapse navbar-collapse" ng-controller="navController" ng-class="!navCollapsed && 'in'">
+
+            <ul class="nav navbar-nav">
+              <li ng-class="{ active: isActive('/')}"><a href="#">Home</a></li>
+                <li ng-class="{ active: isActive('/login')}"><a href="#!/login">Login</a></li>
+                <li ng-class="{ active: isActive('/createAccount')}"><a href="#!/createAccount">Create Account</a></li>
+                <li ng-class="{ active: isActive('/competitions')}"><a href="#!/competitions">Competitions</a></li>
+                <li ng-class="{ active: isActive('/matchSchedule')}"><a href="#!/matchSchedule">Match Schedule</a></li>
+            </ul>
+
+            <!-- Congrats! You have been visited by the ghost of cats past! (CAT EASTER EGG #6) ₍˄·͈༝·͈˄₎◞  -->
+
+
+          </div>
+
+    </nav>
+
+
+    <div class="container">
+      <div ng-view></div>
+    </div>
+
+  </body>
+</html>

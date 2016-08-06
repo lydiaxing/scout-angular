@@ -1,0 +1,53 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th>Match #</th>
+      <th>Red 1</th>
+      <th>Red 2</th>
+      <th>Red 3</th>
+      <th>Blue 1</th>
+      <th>Blue 2</th>
+      <th>Blue 3</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="match in $ctrl.qualMatches">
+      <td>{{match.match_number}} (Qual)</td>
+      <td>{{match.alliances.red.teams[0]}}</td>
+      <td>{{match.alliances.red.teams[1]}}</td>
+      <td>{{match.alliances.red.teams[2]}}</td>
+      <td>{{match.alliances.blue.teams[0]}}</td>
+      <td>{{match.alliances.blue.teams[1]}}</td>
+      <td>{{match.alliances.blue.teams[2]}}</td>
+    </tr>
+    <tr ng-repeat="match in $ctrl.quartfinMatches">
+      <td>{{match.match_number}} (QuartFin)</td>
+      <td>{{match.alliances.red.teams[0]}}</td>
+      <td>{{match.alliances.red.teams[1]}}</td>
+      <td>{{match.alliances.red.teams[2]}}</td>
+      <td>{{match.alliances.blue.teams[0]}}</td>
+      <td>{{match.alliances.blue.teams[1]}}</td>
+      <td>{{match.alliances.blue.teams[2]}}</td>
+    </tr>
+    <tr ng-repeat="match in $ctrl.semifinMatches">
+      <td>{{match.match_number}} (SemiFin)</td>
+      <td>{{match.alliances.red.teams[0]}}</td>
+      <td>{{match.alliances.red.teams[1]}}</td>
+      <td>{{match.alliances.red.teams[2]}}</td>
+      <td>{{match.alliances.blue.teams[0]}}</td>
+      <td>{{match.alliances.blue.teams[1]}}</td>
+      <td>{{match.alliances.blue.teams[2]}}</td>
+    </tr>
+    <tr ng-repeat="match in $ctrl.finMatches">
+      <td>{{match.match_number}} (Finals)</td>
+      <td>{{match.alliances.red.teams[0]}}</td>
+      <td>{{match.alliances.red.teams[1]}}</td>
+      <td>{{match.alliances.red.teams[2]}}</td>
+      <td>{{match.alliances.blue.teams[0]}}</td>
+      <td>{{match.alliances.blue.teams[1]}}</td>
+      <td>{{match.alliances.blue.teams[2]}}</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><font color="white">Congrats! You found CAT EASTER EGG #3 - it's THUMBS UP CAT d(=^･ω･^=)b</font></p>
